@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Zakaria Elqannaa - Web Developer & AI Specialist | Portfolio</title>
+    <meta name="description" content="Zakaria Elqannaa - Professional Web Developer specializing in modern websites, AI integration, and responsive design. Available for freelance projects and collaborations.">
+    <meta name="keywords" content="Zakaria Elqannaa, web developer, AI developer, freelance web developer, React developer, JavaScript developer, web design, portfolio">
+    <meta name="author" content="Zakaria Elqannaa">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://your-username.github.io">
+    
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title" content="Zakaria Elqannaa - Web Developer & AI Specialist">
+    <meta property="og:description" content="Professional Web Developer creating modern, responsive websites with AI integration">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-username.github.io">
+    <meta property="og:image" content="https://your-username.github.io/preview-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zakaria Elqannaa - Web Developer">
+    <meta name="twitter:description" content="Professional Web Developer specializing in modern websites and AI">
+    
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Zakaria Elqannaa",
+      "jobTitle": "Web Developer",
+      "url": "https://your-username.github.io",
+      "sameAs": [
+        "https://linkedin.com/in/yourprofile",
+        "https://github.com/yourusername"
+      ],
+      "email": "zakariaelqannaa84@gmail.com",
+      "knowsAbout": ["Web Development", "AI Integration", "JavaScript", "React", "UI/UX Design"]
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        body[dir="rtl"] {
+            direction: rtl;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .language-switcher {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 0.4rem 0.8rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: #667eea;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            padding: 2rem;
+            background: #f8f9ff;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: #f8f9ff;
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .success-message {
+            display: none;
+            padding: 1rem;
+            background: #4caf50;
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .error-message {
+            display: none;
+            padding: 1rem;
+            background: #f44336;
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 2rem;
+            }
+
+            .language-switcher {
+                gap: 0.3rem;
+            }
+
+            .lang-btn {
+                padding: 0.3rem 0.6rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Zakaria Elqannaa</div>
+            <div style="display: flex; gap: 2rem; align-items: center;">
+                <ul class="nav-links">
+                    <li><a href="#about" data-translate="nav_about">About</a></li>
+                    <li><a href="#skills" data-translate="nav_skills">Skills</a></li>
+                    <li><a href="#projects" data-translate="nav_projects">Projects</a></li>
+                    <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
+                </ul>
+                <div class="language-switcher">
+                    <button class="lang-btn active" onclick="changeLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="changeLanguage('fr')">FR</button>
+                    <button class="lang-btn" onclick="changeLanguage('it')">IT</button>
+                    <button class="lang-btn" onclick="changeLanguage('ar')">AR</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1 data-translate="hero_greeting">Hi, I'm Zakaria Elqannaa</h1>
+        <p data-translate="hero_title">Web Developer & AI Enthusiast</p>
+        <a href="#contact" class="cta-button" data-translate="hero_cta">Get In Touch</a>
+    </div>
+
+    <!-- Hidden SEO-friendly content for search engines -->
+    <div style="position: absolute; left: -9999px;">
+        <h2>Professional Web Developer Services</h2>
+        <p>Zakaria Elqannaa offers professional web development services including custom website design, responsive web development, AI integration, JavaScript development, React applications, and modern UI/UX design. Based in Milan, Italy, available for freelance projects worldwide.</p>
+    </div>
+
+    <div class="container">
+        <section id="about">
+            <h2 data-translate="about_title">About Me</h2>
+            <p data-translate="about_text1">I'm a passionate web developer specializing in creating modern, responsive websites using the latest technologies and AI tools. I love building clean, user-friendly interfaces that solve real problems.</p>
+            <p style="margin-top: 1rem;" data-translate="about_text2">Currently exploring AI integration in web development and constantly learning new technologies to stay at the cutting edge.</p>
+        </section>
+
+        <section id="skills">
+            <h2 data-translate="skills_title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3 data-translate="skill1_title">Web Development</h3>
+                    <p data-translate="skill1_desc">HTML, CSS, JavaScript, React</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3 data-translate="skill2_title">AI Tools</h3>
+                    <p data-translate="skill2_desc">ChatGPT, Claude, GitHub Copilot</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3 data-translate="skill3_title">Design</h3>
+                    <p data-translate="skill3_desc">UI/UX, Responsive Design</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 data-translate="projects_title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3 data-translate="project1_title">Project One</h3>
+                    <p data-translate="project1_desc">A description of your first project. What technologies did you use? What problem does it solve?</p>
+                </div>
+                <div class="project-card">
+                    <h3 data-translate="project2_title">Project Two</h3>
+                    <p data-translate="project2_desc">Your second project description. Highlight the key features and your role in the project.</p>
+                </div>
+                <div class="project-card">
+                    <h3 data-translate="project3_title">Project Three</h3>
+                    <p data-translate="project3_desc">Another exciting project you've worked on. Explain what makes it special.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 data-translate="contact_title">Get In Touch</h2>
+            <div class="success-message" id="successMessage" data-translate="form_success">Message sent successfully!</div>
+            <div class="error-message" id="errorMessage" data-translate="form_error">Failed to send message. Please try again.</div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name" data-translate="form_name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-translate="form_email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-translate="form_message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn" data-translate="form_submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p data-translate="footer_text">&copy; 2025 Zakaria Elqannaa. Built with dedication and innovation.</p>
+    </footer>
+
+    <script>
+        // Translations
+        const translations = {
+            en: {
+                nav_about: "About",
+                nav_skills: "Skills",
+                nav_projects: "Projects",
+                nav_contact: "Contact",
+                hero_greeting: "Hi, I'm Zakaria Elqannaa",
+                hero_title: "Web Developer & AI Enthusiast",
+                hero_cta: "Get In Touch",
+                about_title: "About Me",
+                about_text1: "I'm a passionate web developer specializing in creating modern, responsive websites using the latest technologies and AI tools. I love building clean, user-friendly interfaces that solve real problems.",
+                about_text2: "Currently exploring AI integration in web development and constantly learning new technologies to stay at the cutting edge.",
+                skills_title: "My Skills",
+                skill1_title: "Web Development",
+                skill1_desc: "HTML, CSS, JavaScript, React",
+                skill2_title: "AI Tools",
+                skill2_desc: "ChatGPT, Claude, GitHub Copilot",
+                skill3_title: "Design",
+                skill3_desc: "UI/UX, Responsive Design",
+                projects_title: "Projects",
+                project1_title: "Project One",
+                project1_desc: "A description of your first project. What technologies did you use? What problem does it solve?",
+                project2_title: "Project Two",
+                project2_desc: "Your second project description. Highlight the key features and your role in the project.",
+                project3_title: "Project Three",
+                project3_desc: "Another exciting project you've worked on. Explain what makes it special.",
+                contact_title: "Get In Touch",
+                form_name: "Name",
+                form_email: "Email",
+                form_message: "Message",
+                form_submit: "Send Message",
+                form_success: "Message sent successfully!",
+                form_error: "Failed to send message. Please try again.",
+                footer_text: "© 2025 Zakaria Elqannaa. Built with dedication and innovation."
+            },
+            fr: {
+                nav_about: "À propos",
+                nav_skills: "Compétences",
+                nav_projects: "Projets",
+                nav_contact: "Contact",
+                hero_greeting: "Salut, je suis Zakaria Elqannaa",
+                hero_title: "Développeur Web & Passionné d'IA",
+                hero_cta: "Me Contacter",
+                about_title: "À Propos de Moi",
+                about_text1: "Je suis un développeur web passionné, spécialisé dans la création de sites web modernes et réactifs utilisant les dernières technologies et outils d'IA. J'adore créer des interfaces propres et conviviales qui résolvent de vrais problèmes.",
+                about_text2: "J'explore actuellement l'intégration de l'IA dans le développement web et j'apprends constamment de nouvelles technologies pour rester à la pointe.",
+                skills_title: "Mes Compétences",
+                skill1_title: "Développement Web",
+                skill1_desc: "HTML, CSS, JavaScript, React",
+                skill2_title: "Outils IA",
+                skill2_desc: "ChatGPT, Claude, GitHub Copilot",
+                skill3_title: "Design",
+                skill3_desc: "UI/UX, Design Responsive",
+                projects_title: "Projets",
+                project1_title: "Projet Un",
+                project1_desc: "Une description de votre premier projet. Quelles technologies avez-vous utilisées ? Quel problème résout-il ?",
+                project2_title: "Projet Deux",
+                project2_desc: "La description de votre deuxième projet. Mettez en évidence les fonctionnalités clés et votre rôle dans le projet.",
+                project3_title: "Projet Trois",
+                project3_desc: "Un autre projet passionnant sur lequel vous avez travaillé. Expliquez ce qui le rend spécial.",
+                contact_title: "Me Contacter",
+                form_name: "Nom",
+                form_email: "Email",
+                form_message: "Message",
+                form_submit: "Envoyer le Message",
+                form_success: "Message envoyé avec succès !",
+                form_error: "Échec de l'envoi du message. Veuillez réessayer.",
+                footer_text: "© 2025 Zakaria Elqannaa. Créé avec dévouement et innovation."
+            },
+            it: {
+                nav_about: "Chi sono",
+                nav_skills: "Competenze",
+                nav_projects: "Progetti",
+                nav_contact: "Contatti",
+                hero_greeting: "Ciao, sono Zakaria Elqannaa",
+                hero_title: "Sviluppatore Web & Appassionato di IA",
+                hero_cta: "Contattami",
+                about_title: "Chi Sono",
+                about_text1: "Sono uno sviluppatore web appassionato specializzato nella creazione di siti web moderni e responsive utilizzando le ultime tecnologie e strumenti di IA. Amo creare interfacce pulite e user-friendly che risolvono problemi reali.",
+                about_text2: "Attualmente sto esplorando l'integrazione dell'IA nello sviluppo web e imparo costantemente nuove tecnologie per rimanere all'avanguardia.",
+                skills_title: "Le Mie Competenze",
+                skill1_title: "Sviluppo Web",
+                skill1_desc: "HTML, CSS, JavaScript, React",
+                skill2_title: "Strumenti IA",
+                skill2_desc: "ChatGPT, Claude, GitHub Copilot",
+                skill3_title: "Design",
+                skill3_desc: "UI/UX, Design Responsive",
+                projects_title: "Progetti",
+                project1_title: "Progetto Uno",
+                project1_desc: "Una descrizione del tuo primo progetto. Quali tecnologie hai usato? Quale problema risolve?",
+                project2_title: "Progetto Due",
+                project2_desc: "La descrizione del tuo secondo progetto. Evidenzia le caratteristiche chiave e il tuo ruolo nel progetto.",
+                project3_title: "Progetto Tre",
+                project3_desc: "Un altro progetto interessante su cui hai lavorato. Spiega cosa lo rende speciale.",
+                contact_title: "Contattami",
+                form_name: "Nome",
+                form_email: "Email",
+                form_message: "Messaggio",
+                form_submit: "Invia Messaggio",
+                form_success: "Messaggio inviato con successo!",
+                form_error: "Invio del messaggio fallito. Riprova.",
+                footer_text: "© 2025 Zakaria Elqannaa. Realizzato con dedizione e innovazione."
+            },
+            ar: {
+                nav_about: "من أنا",
+                nav_skills: "المهارات",
+                nav_projects: "المشاريع",
+                nav_contact: "اتصل بي",
+                hero_greeting: "مرحباً، أنا زكرياء القناع",
+                hero_title: "مطور ويب ومتحمس للذكاء الاصطناعي",
+                hero_cta: "تواصل معي",
+                about_title: "من أنا",
+                about_text1: "أنا مطور ويب شغوف متخصص في إنشاء مواقع ويب حديثة ومتجاوبة باستخدام أحدث التقنيات وأدوات الذكاء الاصطناعي. أحب بناء واجهات نظيفة وسهلة الاستخدام تحل المشاكل الحقيقية.",
+                about_text2: "أستكشف حالياً دمج الذكاء الاصطناعي في تطوير الويب وأتعلم باستمرار تقنيات جديدة للبقاء في طليعة المجال.",
+                skills_title: "مهاراتي",
+                skill1_title: "تطوير الويب",
+                skill1_desc: "HTML, CSS, JavaScript, React",
+                skill2_title: "أدوات الذكاء الاصطناعي",
+                skill2_desc: "ChatGPT, Claude, GitHub Copilot",
+                skill3_title: "التصميم",
+                skill3_desc: "UI/UX، التصميم المتجاوب",
+                projects_title: "المشاريع",
+                project1_title: "المشروع الأول",
+                project1_desc: "وصف لمشروعك الأول. ما هي التقنيات التي استخدمتها؟ ما المشكلة التي يحلها؟",
+                project2_title: "المشروع الثاني",
+                project2_desc: "وصف مشروعك الثاني. سلط الضوء على الميزات الرئيسية ودورك في المشروع.",
+                project3_title: "المشروع الثالث",
+                project3_desc: "مشروع مثير آخر عملت عليه. اشرح ما الذي يجعله مميزاً.",
+                contact_title: "تواصل معي",
+                form_name: "الاسم",
+                form_email: "البريد الإلكتروني",
+                form_message: "الرسالة",
+                form_submit: "إرسال الرسالة",
+                form_success: "تم إرسال الرسالة بنجاح!",
+                form_error: "فشل إرسال الرسالة. يرجى المحاولة مرة أخرى.",
+                footer_text: "© 2025 زكرياء القناع. مصنوع بتفانٍ وابتكار."
+            }
+        };
+
+        let currentLang = 'en';
+
+        function changeLanguage(lang) {
+            currentLang = lang;
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Set text direction for Arabic
+            if (lang === 'ar') {
+                document.body.setAttribute('dir', 'rtl');
+            } else {
+                document.body.setAttribute('dir', 'ltr');
+            }
+
+            // Update all translatable elements
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Form submission using FormSubmit.co
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('.submit-btn');
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            submitBtn.textContent = currentLang === 'en' ? 'Sending...' : 
+                                   currentLang === 'fr' ? 'Envoi...' : 
+                                   currentLang === 'it' ? 'Invio...' : 'جاري الإرسال...';
+            
+            const formData = new FormData(this);
+            
+            try {
+                const response = await fetch('https://formsubmit.co/zakariaelqannaa84@gmail.com', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    successMsg.style.display = 'block';
+                    errorMsg.style.display = 'none';
+                    this.reset();
+                    setTimeout(() => {
+                        successMsg.style.display = 'none';
+                    }, 5000);
+                } else {
+                    throw new Error('Failed to send');
+                }
+            } catch (error) {
+                errorMsg.style.display = 'block';
+                successMsg.style.display = 'none';
+                setTimeout(() => {
+                    errorMsg.style.display = 'none';
+                }, 5000);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = translations[currentLang].form_submit;
+            }
+        });
+    </script>
+</body>
+</html>
